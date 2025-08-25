@@ -8,60 +8,30 @@ body {
     height: 100vh;
     background-color:#048ce6;
     
-    
 }
 
 .carousel {
     position: relative;
-    width: 90%;
-    max-width: 900px;
+    width: 80%;
+    max-width: 1000px;
     overflow: hidden;
     border-radius: 10px;
-    scroll-behavior: smooth;
-    anchor-name:--carousel;
-    
 
 }
- 
-.carousel::scroll-button(right),.carousel::scroll-button(left) {
-    content: '>';
-    border: none;
-    background-color:#005fa3;
-    font-family: Consolas;
-    font-size: 2rem;
-    color: white;
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    padding-bottom: .1em;
-    cursor: pointer;
-    position: fixed;
-    position-anchor: --carousel;
-    position-area: right center;
-    translate: -80%
-
-}
-    .carousel::scroll-button(left) {
-     content: '<';
-     position-area: left center;
-     translate: 80%
-    }
-
 
 .carousel-images {
-    
+
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
 
 .carousel-images img {
-    
     width: 100%;
     border: none;
 }
 
 button {
-
+    position: absolute;
     top: 50%;
     transform: translateY(-50%);
     background-color: rgba(6, 6, 147, 0.755);
@@ -69,7 +39,7 @@ button {
     border: none;
     padding: 10px;
     cursor: pointer;
-    border-radius: 10%;
+    border-radius: 50%;
     font-size: 18px;
 }
 
@@ -77,28 +47,19 @@ button:hover {
     background-color: rgba(16, 16, 236, 0.8);
 }
 
+.prev {
+    left: 10px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
+.next {
+    right: 10px;
+}
 
 form {
-        position: absolute;
+    position: absolute;
     max-width: 400px;
     margin: auto;
-    padding: 24px;
+    padding: 22px;
     border: 1px solid #f651e8;
     border-radius: 8px;
     background: #efeded;
@@ -120,18 +81,7 @@ input, textarea, select {
     box-sizing: border-box;
 }
 
-button {
 
-
-
-    background: #0077cc;
-    color: #fff;
-    border: none;
-    padding: 10px 24px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-}
 
 button:hover {
     background: #005fa3;
